@@ -2151,6 +2151,7 @@ export async function getClaimOutcome(
 
 export const checkClaimOutcome = getClaimOutcome;
 
+
 /**
  * Batched form of {@link hasClaim}: checks several claim types for one wallet.
  */
