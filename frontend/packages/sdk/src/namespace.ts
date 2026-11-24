@@ -13,6 +13,8 @@ import {
   getClaim,
   getClaimRecord,
   checkClaimStatus,
+  getClaimOutcome,
+  checkClaimOutcome,
   hasClaims,
   getClaims,
   verifyPreset,
@@ -71,6 +73,7 @@ import {
   CredentialValidationError,
 } from "./validateCredential";
 import { getIssuer, isValidIssuer, listIssuerIds, listIssuers } from "./issuers";
+import { telemetry } from "./telemetry";
 
 export const StellarCred = {
   configure,
@@ -83,6 +86,8 @@ export const StellarCred = {
   getClaim,
   getClaimRecord,
   checkClaimStatus,
+  getClaimOutcome,
+  checkClaimOutcome,
   hasClaims,
   getClaims,
   verifyPreset,
@@ -139,6 +144,7 @@ export const StellarCred = {
   TransactionSubmissionError,
   CredentialValidationError,
   parseContractError,
+  telemetry, // Opt-in, zero-PII telemetry (#1064)
 };
 
 export default StellarCred;
